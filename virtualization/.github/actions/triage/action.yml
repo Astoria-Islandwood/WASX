@@ -1,0 +1,43 @@
+name: Run automated triage
+
+
+inputs:
+    issue:
+      required: false
+      type: string
+    comment:
+      required: false
+      type: string
+    token:
+      required: false
+      type: string
+    previous_body:
+      required: false
+      type: string
+
+runs:
+    using: "composite"
+    steps:
+      - name: 'Run WTI'
+        shell: pwsh
+        env: 
+            previous_body: "${{ inputs.previous_body }}"
+        run: |
+            $ErrorActionPreference = [System.Management.Automation.ActionPreference]::Stop
+            
+            $maybe_comment = @()
+            if (![string]::IsNullOrEmpty("${{ inputs.comment }}"))
+            {
+                $maybe_comment = @("--comment", "${{ inputs.comment }}")
+            }
+            
+            $maybe_previous_body = @()
+            if (![string]::IsNullOrEmpty("$env:previous_body"))
+            {
+                $env:previous_body | Out-File -Encoding utf8 "triage\previous_body.txt"
+                $maybe_previous_body = @("--previous-issue-body", "previous_body.txt")
+            }
+            
+            curl.exe -L https://github.com/OneBlue/wti/releases/download/v0.1.12/wti.exe -o triage/wti.exe
+            
+            cd triage && .\wti.exe --issue ${{ inputs.issue }} --config config.yml --github-token "${{ inputs.token }}" --ignore-tags @maybe_comment @maybe_previous_body
