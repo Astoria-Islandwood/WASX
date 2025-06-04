@@ -1,0 +1,25 @@
+#!/bin/sh
+set +e
+
+if [ "$(whoami)" != "root" ]
+then
+	echo "Uninstall must be run as root, invoking sudo"
+	exec sudo su -c "$0" "$@"
+fi
+
+if command -v darling
+then
+	$(dirname "$0")/shutdown-user.sh
+fi
+
+INSTALL_PREFIX="$(dirname "$(dirname "$(which darling)")")"
+if [ -d "${INSTALL_PREFIX}/libexec" ]
+then
+	rm -rf "${INSTALL_PREFIX}/libexec/darling"
+	rmdir --ignore-fail-on-non-empty "${INSTALL_PREFIX}/libexec"
+fi
+rm -f "${INSTALL_PREFIX}/bin/darling"
+rm -f "${INSTALL_PREFIX}/bin/darlingserver"
+rm -f "${INSTALL_PREFIX}/bin/darling-coredump"
+find /lib/modules -name darling-mach.ko -delete
+echo "Uninstall complete"
