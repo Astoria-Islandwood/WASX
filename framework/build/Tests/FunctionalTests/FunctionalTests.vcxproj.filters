@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{888433E4-7389-456A-9835-C26A70759572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{8FA11134-B928-4BAA-89EA-DBFB294CAB00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\AssetsLibraryTests">
+      <UniqueIdentifier>{e421dffa-cf92-4b58-a6cf-0e4a0d9d05e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProjectionTests">
+      <UniqueIdentifier>{1d2d75c3-0b64-46a1-bf8a-05ec70f57e1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\CoreAnimationTests">
+      <UniqueIdentifier>{adbe45e4-b65b-408c-ab82-2442ffdabf00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\UIKitTests">
+      <UniqueIdentifier>{34bd5c19-86ba-4661-bbb6-63295c1ca90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\ExternalUXResources">
+      <UniqueIdentifier>{4c703c5d-0c21-4205-9e17-55fed2d45b67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\UIKitTests\Assets">
+      <UniqueIdentifier>{f7dcb73b-7804-43c2-bed5-5fc4c68b2bb5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\targetver.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Framework\Framework.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\FunctionalTestHelpers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\UXTestHelpers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\AssetsLibraryTests\AssetsLibraryTestHelpers.h">
+      <Filter>Tests\AssetsLibraryTests</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\AppDelegate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\MainViewController.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\MenuTableViewController.h">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\TestEnabledUITextField.h">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIButtonWithControlsViewController.h">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UILabelViewController.h">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIScrollViewController.h">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIActivityIndicatorViewController.h">
+       <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIProgressViewController.h">
+       <Filter>Tests\ExternalUXResources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\FunctionalTests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\FunctionalTestHelpers.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\UXTestHelpers.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\SampleTest.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSURLConnectionTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSURLSession.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSBundleTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\CortanaTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSUserDefaultsTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\ToastNotificationTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIApplicationTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\ProjectionTests\CoreDispatcherTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSURLStorageFileTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSLayoutConstraintTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSOperationQueueTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\FileActivationTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\ProjectionTests\SanityTests.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\ProjectionTests\SanityTestsWithARCEnabled.mm">
+      <Filter>Tests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\AssetsLibraryTests\AssetsLibraryTests.mm">
+      <Filter>Tests\AssetsLibraryTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\AssetsLibraryTests\AssetsLibraryTestHelpers.mm">
+      <Filter>Tests\AssetsLibraryTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\CoreAnimationTests\CALayerAppearanceTests.mm">
+      <Filter>Tests\CoreAnimationTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIActionSheetTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIButtonTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIActivityIndicatorTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIProgressViewTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIScrollViewTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UISliderTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UITextFieldTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIViewTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIGestureCoordinatorTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UILabelTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\UIViewControllerTests.mm">
+      <Filter>Tests\UIKitTests</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\AppDelegate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\MainViewController.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\MenuTableViewController.m">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\TestEnabledUITextField.mm">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIButtonWithControlsViewController.m">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UILabelViewController.m">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIScrollViewController.m">
+      <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIActivityIndicatorViewController.m">
+       <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\samples\XAMLCatalog\XAMLCatalog\UIKitControls\UIProgressViewController.m">
+       <Filter>Tests\ExternalUXResources</Filter>
+    </ClangCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\NSURL.AppxManifest.xml">
+      <Filter>Tests</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\AssetsLibraryTests\AssetsLibrary.AppxManifest.xml">
+      <Filter>Tests\AssetsLibraryTests</Filter>
+    </Xml>
+    <Xml Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\Default.AppxManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\AssetsLibraryTests\AssetsLibraryTestVideo.mp4">
+      <Filter>Tests\AssetsLibraryTests</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <xml Include="$(MSBuildThisFileDirectory)..\..\..\tests\functionaltests\Tests\UIKitTests\Assets\uilabel-ios.xml">
+      <Filter>Tests\UIKitTests\Assets</Filter>
+    </xml>
+  </ItemGroup>
+</Project>

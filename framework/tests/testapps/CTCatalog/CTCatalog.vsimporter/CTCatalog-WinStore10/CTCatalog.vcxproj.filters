@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{bef5107b-6681-4dce-bf48-2a19d2c2b7ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{683d7cc7-3b08-4bed-bb6d-9aaae068b528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CTCatalog">
+      <UniqueIdentifier>{426F4E56-0621-4361-92E7-9AE3EC036EE3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CTCatalog\Base">
+      <UniqueIdentifier>{1FE3F40E-C861-4A94-9F02-FBD5E374A450}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CTCatalog\Supporting Files">
+      <UniqueIdentifier>{BDB595CC-29EB-4AD2-9DDF-640D0600CDC9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CTCatalog\Test">
+      <UniqueIdentifier>{468419C8-0367-42D7-AECD-462757E3B7CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{F6E29AB4-3FE5-4343-A7FC-BD7ABC3161F8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="CTCatalog_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\CTCatalog\Assets.xcassets">
+      <Filter>CTCatalog</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\CTCatalog\AppDelegate.h">
+      <Filter>CTCatalog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\CTCBaseViewController.h">
+      <Filter>CTCatalog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\CTCRootViewController.h">
+      <Filter>CTCatalog</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCAffineTransformationTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCAlignmentTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCFontTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCFrameTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCFramesetterTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCLineTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCParagraphStyleTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCPathForGlyphTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CTCatalog\Tests\CTCRunTestViewController.h">
+      <Filter>CTCatalog\Test</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\CTCatalog\AppDelegate.m">
+      <Filter>CTCatalog</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\CTCBaseViewController.mm">
+      <Filter>CTCatalog</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\CTCRootViewController.m">
+      <Filter>CTCatalog</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCAffineTransformationTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCAlignmentTestViewController.m">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCFontTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCFrameTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCFramesetterTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCLineTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCParagraphStyleTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCPathForGlyphTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\Tests\CTCRunTestViewController.mm">
+      <Filter>CTCatalog\Test</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CTCatalog\main.m">
+      <Filter>CTCatalog\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\CTCatalog\Info.plist" />
+    <StoryboardCompile Include="..\..\CTCatalog\Base.lproj\LaunchScreen.storyboard">
+      <Filter>CTCatalog\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\CTCatalog\Base.lproj\Main.storyboard">
+      <Filter>CTCatalog\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="CTCatalog-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="CTCatalog-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

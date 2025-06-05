@@ -1,0 +1,4 @@
+module UIKit [extern_c] {
+    umbrella header "UIKit.h"
+    export *
+}

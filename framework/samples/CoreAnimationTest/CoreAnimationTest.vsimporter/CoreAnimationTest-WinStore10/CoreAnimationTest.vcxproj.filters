@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{24f666a8-23c2-4b7d-8006-b3832d7162bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{fc046873-b530-483a-be8a-98762f9d618d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoreAnimationTest">
+      <UniqueIdentifier>{CBCF8F83-9FB2-4C08-AB1E-FDAF05FF80B7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoreAnimationTest\Supporting Files">
+      <UniqueIdentifier>{59E6FCF2-D639-4FBE-BDCD-6A0C0EA1053F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{81A22325-0BA8-4396-84BC-6EB1F070B9FA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{402C1DDA-8A9B-42DE-81F0-DB5FDDC37426}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="CoreAnimationTest_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <ClInclude Include="..\..\CoreAnimationTest\AppDelegate.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CAEmitterLayerControlsViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CAEmitterLayerViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CALayerAnimationViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CALayerMultipleViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CALayerViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CAScrollLayerViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CAShapeLayerViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CGPointTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\CGRectTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\Constants.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\FooterTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\HeaderTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\LayerTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\MenuTableViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\PickerViewTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\ProgrammaticViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\PropertyTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\ScrollingView.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\SliderTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\StoryBoardViewController.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\StringTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\CoreAnimationTest\SwitchTableViewCell.h">
+      <Filter>CoreAnimationTest</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\CoreAnimationTest\AppDelegate.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CAEmitterLayerControlsViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CAEmitterLayerViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CALayerAnimationViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CALayerMultipleViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CALayerViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CAScrollLayerViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CAShapeLayerViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CGPointTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\CGRectTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\Constants.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\FooterTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\HeaderTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\LayerTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\MenuTableViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\PickerViewTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\ProgrammaticViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\PropertyTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\ScrollingView.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\SliderTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\StoryBoardViewController.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\StringTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\SwitchTableViewCell.m">
+      <Filter>CoreAnimationTest</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\CoreAnimationTest\main.m">
+      <Filter>CoreAnimationTest\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\CoreAnimationTest\Info.plist" />
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\3x3grid.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\align_center.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\align_just.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\align_left.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\align_right.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\earthwindandfire.jpg">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\safe.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\star.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <SBResourceCopy Include="..\..\CoreAnimationTest\Images\storkinayutthaya.png">
+      <Filter>Images</Filter>
+    </SBResourceCopy>
+    <StoryboardCompile Include="..\..\CoreAnimationTest\CoreAnimationTest.storyboard">
+      <Filter>CoreAnimationTest</Filter>
+    </StoryboardCompile>
+    <Text Include="CoreAnimationTest-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="CoreAnimationTest-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <WinObjCPackageOverridePath Include="$(MSBuildThisFileDirectory)..\build\OutputPackages"/>
+    <WinObjCPackageOverridePath Include="$(MSBuildThisFileDirectory)..\tools\OutputPackages"/>
+  </ItemGroup>
+
+    <!-- 
+      Task To Fixup package dependencies based on locally built / pre-release packages being available.
+      Packages have the following precendence:
+
+      1. Use Locally built packages if possible, preferring *any* Release Package over Debug
+      2. Otherwise Use Latest pre-release package if building pre-release (determined by gitversion)
+      3. Otherwise use "*" Version (latest stable package)
+    -->
+    <UsingTask  
+    TaskName="FixupVersionOfWinObjCPackageReferences"
+    TaskFactory="CodeTaskFactory"  
+    AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.v12.0.dll" >
+    <ParameterGroup>
+      <PackageReferences ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <SearchPaths ParameterType="Microsoft.Build.Framework.ITaskItem[]" Required="true" />
+      <PackageReference_PrereleaseVersion ParameterType="System.String" Required="false" />
+      <AdjustedPackageReferences  ParameterType="Microsoft.Build.Framework.ITaskItem[]" Output="true" />
+    </ParameterGroup>
+    <Task>
+      <Reference Include="System" />
+      <Reference Include="System.IO" />
+      <Using Namespace="System" />
+      <Using Namespace="System.IO" />
+      <Using Namespace="System.Text.RegularExpressions" />
+      <Code Type="Fragment" Language="cs">
+        <![CDATA[
+
+          if (PackageReferences.Length > 0) {
+            foreach (var packageItem in PackageReferences) {
+              // Try to find a matching package in one of the search paths.
+              string packageName = packageItem.GetMetadata("Identity");
+              var searchRegex = new Regex(packageName + @"\.\d+\.\d+\.\d+(-.*)?");
+
+              // Only be fancy with our own packages
+              if (!packageName.StartsWith("WinObjC") || 
+                   packageItem.GetMetadata("Version") != "*") {
+                continue;
+              }
+
+              List<string> matches = new List<string>();
+
+              foreach(var pathItem in SearchPaths) {
+                string basePath = pathItem.GetMetadata("FullPath");
+
+                // Check 3 directories:
+                // 1. The search path itself
+                // 2. A Release subdir
+                // 3. A Debug subdir
+                string[] paths = new string[] {basePath, basePath + @"\Release", basePath + @"\Debug"};
+
+                foreach (var path in paths) {
+                  if (Directory.Exists(path)) {
+                    matches.AddRange(Directory.GetFiles(path, "*.nupkg").Where(f => searchRegex.IsMatch(Path.GetFileNameWithoutExtension(f))));
+                  }
+                }
+              }
+
+              var file = matches.OrderByDescending(f => (new FileInfo(f)).LastWriteTimeUtc).FirstOrDefault();
+
+              if (file != null) {
+                // Remove 1 extra for the . in between PackageName and version
+                string version = Path.GetFileNameWithoutExtension(file).Remove(0, packageName.Length + 1);
+                Log.LogMessage("Adjusting " + packageName + " to new version " + version);
+                packageItem.SetMetadata("Version", version);
+              } else if (PackageReference_PrereleaseVersion != null) {
+                // No local package found. Fixup to use latest pre-release version.
+                Log.LogMessage("Adjusting " + packageName + " to latest pre-release version " + PackageReference_PrereleaseVersion);
+                packageItem.SetMetadata("Version", PackageReference_PrereleaseVersion);
+              }
+            }
+          }
+
+          AdjustedPackageReferences = PackageReferences;
+        ]]>
+      </Code>
+    </Task>
+  </UsingTask>
+
+  <PropertyGroup>
+    <FixupWinObjCPackageReferencesDependsOn>_GetRestoreProjectStyle</FixupWinObjCPackageReferencesDependsOn>
+    <FixupWinObjCPackageReferencesDependsOn Condition="'$(IsNuGetized)' != ''">GetPackageContents;%(FixupWinObjCPackageReferencesDependsOn)</FixupWinObjCPackageReferencesDependsOn>
+  </PropertyGroup>
+  
+  <Target Name="FixupWinObjCPackageReferences" BeforeTargets="$(FixupWinObjCPackageReferencesDependsOn)" DependsOnTargets="CalculatePackageVersion">
+
+    <!-- Only set a pre-release version to use if it is a pre-release build itself. Stable builds should depend on stable packages. -->
+    <PropertyGroup>
+      <PackageReference_PrereleaseVersion Condition="'$(PackageVersion_PreRelease)' != ''">$(PackageVersion_Major).$(PackageVersion_Minor).$(PackageVersion_Patch)-*</PackageReference_PrereleaseVersion>
+    </PropertyGroup>
+
+
+    <FixupVersionOfWinObjCPackageReferences 
+         PackageReferences="@(PackageReference)"
+         SearchPaths="@(WinObjCPackageOverridePath)"
+         PackageReference_PrereleaseVersion="$(PackageReference_PrereleaseVersion)"
+         >
+      <Output TaskParameter="AdjustedPackageReferences" ItemName="_AdjustedPackageReferences" />
+    </FixupVersionOfWinObjCPackageReferences>
+
+    <ItemGroup>
+      <PackageReference Remove="@(PackageReference)" />
+      <PackageReference Include="@(_AdjustedPackageReferences)" />
+    </ItemGroup>
+  </Target>
+
+  <Import Project="$(MSBuildThisFileDirectory)\workaround\Microsoft.Nuget.Workaround.targets"/>
+
+  <!-- 
+       Work around issue with new PackageReference style of Restore. This style doesn't auto-restore in viusal studio when building (at least not for .vcxproj)
+       Instead of relying on the automatic behavior in Visual Studio, manually restore by having one project that all other projects depend on that does the restore. This should NOT be needed in the hopefully near future. 
+
+       NOTE: To make this work, this project MUST be added to the solution so that Visual Studio can see it and build it before building any projects that 
+       depend on it.
+  -->
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)\NugetRestore.msbuildproj">
+      <Project>{B2C6186E-B340-49D8-888E-76ED83752E43}</Project>
+      <IncludeInPackage>false</IncludeInPackage>
+      <Private>false</Private>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+    </ProjectReference>
+  </ItemGroup>
+
+  <!-- Check _WinObjCVersioningTargetsImported as a lazy way to avoid double imports. This isn't fool proof but most consumers add this override targets
+       at the very bottom so other sources that may import the versioning targets should have already happened. Its not the end of the world to double import
+       but msbuild will give out a warning.
+  -->
+  <Import Project="$(MSBuildThisFileDirectory)\winobjc.versioning.common.targets" Condition="'$(_WinObjCVersioningTargetsImported)' == ''"/>
+</Project>

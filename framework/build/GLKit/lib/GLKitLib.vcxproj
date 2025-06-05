@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKEffect.mm">
+      <ObjectiveCARC>true</ObjectiveCARC>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKMath.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKTexture.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKView.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKViewController.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKSkyboxEffect.mm">
+      <ObjectiveCARC>true</ObjectiveCARC>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKShader.mm">
+      <ObjectiveCARC>true</ObjectiveCARC>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\GLKit\GLKMatrixStack.mm" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{69003FC3-4890-430D-8527-B81C99781864}</ProjectGuid>
+    <ProjectName>GLKitLib</ProjectName>
+    <RootNamespace>GLKitLib</RootNamespace>
+    <AppContainerApplication>true</AppContainerApplication>
+    <StarboardBasePath>$(MSBuildThisFileDirectory)..\..\..</StarboardBasePath>
+    <OutputName>GLKitLib</OutputName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 -D__GLKIT_INSIDE_BUILD %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 -D__GLKIT_INSIDE_BUILD %(AdditionalOptions)</AdditionalOptions>
+      <OptimizationLevel>Full</OptimizationLevel>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 -D__GLKIT_INSIDE_BUILD %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 -D__GLKIT_INSIDE_BUILD %(AdditionalOptions)</AdditionalOptions>
+      <OptimizationLevel>Full</OptimizationLevel>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.targets" />
+  </ImportGroup>
+  <Import Project="$(StarboardBasePath)\common\winobjc.packagereference.override.targets" Condition="Exists('$(StarboardBasePath)\common\winobjc.packagereference.override.targets')"/>
+</Project>

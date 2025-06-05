@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+
+  <PropertyGroup>
+    <HasConfigurationSpecificPackageContents Condition="'$(HasConfigurationSpecificPackageContents)' == '' ">false</HasConfigurationSpecificPackageContents>
+    <ShouldAssignPackageContentBasePath Condition="'$(PackageContentBasePath)' == ''">true</ShouldAssignPackageContentBasePath>
+    <PackageContentBasePath Condition="'$(ShouldAssignPackageContentBasePath)' == 'true'">build\lib\$(TargetOsAndVersion)\$(PlatformTarget)</PackageContentBasePath>
+    <PackageContentBasePath Condition="'$(ShouldAssignPackageContentBasePath)' == 'true' and '$(HasConfigurationSpecificPackageContents)' == 'true'">$(PackageContentBasePath)\$(Configuration)</PackageContentBasePath>
+  </PropertyGroup>
+
+  <Target Name="AddBuiltOutput" BeforeTargets="GetPackageContents"  DependsOnTargets="$(GetPackageContentsDependsOn)" Condition="'$(ConfigurationType)' == 'DynamicLibrary' or '$(ConfigurationType)' == 'Application'">
+    
+    <ItemGroup>
+      <!-- Since GetPackageContents runs in a second pass outside of the normal build, add a tmp Link item -->
+      <Link Include="tmp" Condition="'@(Link)'==''">
+       <DeleteSoon>true</DeleteSoon>
+      </Link>
+
+      <_ImportLibraryFileNames Include="@(Link -> '%(ImportLibrary)')">
+      </_ImportLibraryFileNames>
+      
+      <_BuiltProjectOutputGroupOutput Include="@(BuiltProjectOutputGroupOutput -> '%(FinalOutputPath)')" />
+      <PackageFile Include="@(_BuiltProjectOutputGroupOutput)" Condition="Exists('%(FullPath)')">
+        <PackagePath>$(PackageContentBasePath)\%(Filename)%(Extension)</PackagePath>
+      </PackageFile>
+      
+      <PackageFile Include="@(_ImportLibraryFileNames->Distinct())" Condition="Exists('%(FullPath)')">
+        <PackagePath>$(PackageContentBasePath)\%(Filename)%(Extension)</PackagePath>
+      </PackageFile>
+
+      <PackageFile Include="@(WinMDFullPath)" Condition="'@(WinMDFullPath)' != ''">
+        <PackagePath>$(PackageContentBasePath)\%(Filename)%(Extension)</PackagePath>
+      </PackageFile>
+
+      <Link Remove="@(Link)" Condition="'%(Link.DeleteSoon)'=='true'" />
+    </ItemGroup>
+  </Target>
+
+  <Import Project="$(MSBuildThisFileDirectory)\..\..\common\winobjc.versioning.common.targets"/>
+</Project>

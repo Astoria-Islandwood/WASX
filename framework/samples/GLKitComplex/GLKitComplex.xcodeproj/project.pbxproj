@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8BB6C7FC1E204FF500F0FF90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6C7FA1E204FF500F0FF90 /* Main.storyboard */; };
+		8BB6C7FE1E204FF500F0FF90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6C7FD1E204FF500F0FF90 /* Assets.xcassets */; };
+		8BB6C8011E204FF500F0FF90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6C7FF1E204FF500F0FF90 /* LaunchScreen.storyboard */; };
+		8BB6C80E1E20512600F0FF90 /* GLKitComplex.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6C8081E20512600F0FF90 /* GLKitComplex.mm */; };
+		8BB6C80F1E20512600F0FF90 /* GLRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6C80A1E20512600F0FF90 /* GLRenderer.mm */; };
+		8BB6C8101E20512600F0FF90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6C80B1E20512600F0FF90 /* main.m */; };
+		8BB6C8111E20512600F0FF90 /* Mesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8BB6C80D1E20512600F0FF90 /* Mesh.mm */; };
+		8BB6C8131E20512B00F0FF90 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6C8121E20512B00F0FF90 /* Data */; };
+		8BB6C8161E20514100F0FF90 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB6C8151E20514100F0FF90 /* GLKit.framework */; };
+		8BB6C8181E20517000F0FF90 /* utah-teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8BB6C8171E20517000F0FF90 /* utah-teapot.obj */; };
+		99CE5D751E3AB494003E972E /* lobbyxneg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D6A1E3AB494003E972E /* lobbyxneg.JPG */; };
+		99CE5D761E3AB494003E972E /* lobbyxpos.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D6B1E3AB494003E972E /* lobbyxpos.JPG */; };
+		99CE5D771E3AB494003E972E /* lobbyyneg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D6C1E3AB494003E972E /* lobbyyneg.JPG */; };
+		99CE5D781E3AB494003E972E /* lobbyypos.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D6D1E3AB494003E972E /* lobbyypos.JPG */; };
+		99CE5D791E3AB494003E972E /* lobbyzneg.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D6E1E3AB494003E972E /* lobbyzneg.JPG */; };
+		99CE5D7A1E3AB494003E972E /* lobbyzpos.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D6F1E3AB494003E972E /* lobbyzpos.JPG */; };
+		99CE5D7B1E3AB494003E972E /* seafloor.png in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D701E3AB494003E972E /* seafloor.png */; };
+		99CE5D7C1E3AB494003E972E /* teapot_decal.png in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D711E3AB494003E972E /* teapot_decal.png */; };
+		99CE5D7D1E3AB494003E972E /* teapot_emissive.png in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D721E3AB494003E972E /* teapot_emissive.png */; };
+		99CE5D7E1E3AB494003E972E /* teapot_specular.pdn in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D731E3AB494003E972E /* teapot_specular.pdn */; };
+		99CE5D7F1E3AB494003E972E /* teapot_specular.png in Resources */ = {isa = PBXBuildFile; fileRef = 99CE5D741E3AB494003E972E /* teapot_specular.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8BB6C7EE1E204FF500F0FF90 /* GLKitComplex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLKitComplex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB6C7FB1E204FF500F0FF90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8BB6C7FD1E204FF500F0FF90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8BB6C8001E204FF500F0FF90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8BB6C8021E204FF500F0FF90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB6C8081E20512600F0FF90 /* GLKitComplex.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLKitComplex.mm; sourceTree = "<group>"; };
+		8BB6C8091E20512600F0FF90 /* GLRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLRenderer.h; sourceTree = "<group>"; };
+		8BB6C80A1E20512600F0FF90 /* GLRenderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GLRenderer.mm; sourceTree = "<group>"; };
+		8BB6C80B1E20512600F0FF90 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8BB6C80C1E20512600F0FF90 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
+		8BB6C80D1E20512600F0FF90 /* Mesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Mesh.mm; sourceTree = "<group>"; };
+		8BB6C8121E20512B00F0FF90 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		8BB6C8151E20514100F0FF90 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8BB6C8171E20517000F0FF90 /* utah-teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "utah-teapot.obj"; path = "Data/utah-teapot.obj"; sourceTree = "<group>"; };
+		99CE5D6A1E3AB494003E972E /* lobbyxneg.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lobbyxneg.JPG; path = Data/lobbyxneg.JPG; sourceTree = "<group>"; };
+		99CE5D6B1E3AB494003E972E /* lobbyxpos.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lobbyxpos.JPG; path = Data/lobbyxpos.JPG; sourceTree = "<group>"; };
+		99CE5D6C1E3AB494003E972E /* lobbyyneg.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lobbyyneg.JPG; path = Data/lobbyyneg.JPG; sourceTree = "<group>"; };
+		99CE5D6D1E3AB494003E972E /* lobbyypos.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lobbyypos.JPG; path = Data/lobbyypos.JPG; sourceTree = "<group>"; };
+		99CE5D6E1E3AB494003E972E /* lobbyzneg.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lobbyzneg.JPG; path = Data/lobbyzneg.JPG; sourceTree = "<group>"; };
+		99CE5D6F1E3AB494003E972E /* lobbyzpos.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lobbyzpos.JPG; path = Data/lobbyzpos.JPG; sourceTree = "<group>"; };
+		99CE5D701E3AB494003E972E /* seafloor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seafloor.png; path = Data/seafloor.png; sourceTree = "<group>"; };
+		99CE5D711E3AB494003E972E /* teapot_decal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teapot_decal.png; path = Data/teapot_decal.png; sourceTree = "<group>"; };
+		99CE5D721E3AB494003E972E /* teapot_emissive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teapot_emissive.png; path = Data/teapot_emissive.png; sourceTree = "<group>"; };
+		99CE5D731E3AB494003E972E /* teapot_specular.pdn */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = teapot_specular.pdn; path = Data/teapot_specular.pdn; sourceTree = "<group>"; };
+		99CE5D741E3AB494003E972E /* teapot_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = teapot_specular.png; path = Data/teapot_specular.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BB6C7EB1E204FF500F0FF90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB6C8161E20514100F0FF90 /* GLKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BB6C7E51E204FF500F0FF90 = {
+			isa = PBXGroup;
+			children = (
+				8BB6C7F01E204FF500F0FF90 /* GLKitComplex */,
+				8BB6C7EF1E204FF500F0FF90 /* Products */,
+				8BB6C8141E20514100F0FF90 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8BB6C7EF1E204FF500F0FF90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8BB6C7EE1E204FF500F0FF90 /* GLKitComplex.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8BB6C7F01E204FF500F0FF90 /* GLKitComplex */ = {
+			isa = PBXGroup;
+			children = (
+				99CE5D6A1E3AB494003E972E /* lobbyxneg.JPG */,
+				99CE5D6B1E3AB494003E972E /* lobbyxpos.JPG */,
+				99CE5D6C1E3AB494003E972E /* lobbyyneg.JPG */,
+				99CE5D6D1E3AB494003E972E /* lobbyypos.JPG */,
+				99CE5D6E1E3AB494003E972E /* lobbyzneg.JPG */,
+				99CE5D6F1E3AB494003E972E /* lobbyzpos.JPG */,
+				99CE5D701E3AB494003E972E /* seafloor.png */,
+				99CE5D711E3AB494003E972E /* teapot_decal.png */,
+				99CE5D721E3AB494003E972E /* teapot_emissive.png */,
+				99CE5D731E3AB494003E972E /* teapot_specular.pdn */,
+				99CE5D741E3AB494003E972E /* teapot_specular.png */,
+				8BB6C8121E20512B00F0FF90 /* Data */,
+				8BB6C8081E20512600F0FF90 /* GLKitComplex.mm */,
+				8BB6C8171E20517000F0FF90 /* utah-teapot.obj */,
+				8BB6C8091E20512600F0FF90 /* GLRenderer.h */,
+				8BB6C80A1E20512600F0FF90 /* GLRenderer.mm */,
+				8BB6C80B1E20512600F0FF90 /* main.m */,
+				8BB6C80C1E20512600F0FF90 /* Mesh.h */,
+				8BB6C80D1E20512600F0FF90 /* Mesh.mm */,
+				8BB6C7FA1E204FF500F0FF90 /* Main.storyboard */,
+				8BB6C7FD1E204FF500F0FF90 /* Assets.xcassets */,
+				8BB6C7FF1E204FF500F0FF90 /* LaunchScreen.storyboard */,
+				8BB6C8021E204FF500F0FF90 /* Info.plist */,
+			);
+			path = GLKitComplex;
+			sourceTree = "<group>";
+		};
+		8BB6C8141E20514100F0FF90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BB6C8151E20514100F0FF90 /* GLKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8BB6C7ED1E204FF500F0FF90 /* GLKitComplex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BB6C8051E204FF500F0FF90 /* Build configuration list for PBXNativeTarget "GLKitComplex" */;
+			buildPhases = (
+				8BB6C7EA1E204FF500F0FF90 /* Sources */,
+				8BB6C7EB1E204FF500F0FF90 /* Frameworks */,
+				8BB6C7EC1E204FF500F0FF90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GLKitComplex;
+			productName = GLKitComplex;
+			productReference = 8BB6C7EE1E204FF500F0FF90 /* GLKitComplex.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8BB6C7E61E204FF500F0FF90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Henry Fox";
+				TargetAttributes = {
+					8BB6C7ED1E204FF500F0FF90 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8BB6C7E91E204FF500F0FF90 /* Build configuration list for PBXProject "GLKitComplex" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8BB6C7E51E204FF500F0FF90;
+			productRefGroup = 8BB6C7EF1E204FF500F0FF90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8BB6C7ED1E204FF500F0FF90 /* GLKitComplex */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8BB6C7EC1E204FF500F0FF90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB6C8011E204FF500F0FF90 /* LaunchScreen.storyboard in Resources */,
+				99CE5D7F1E3AB494003E972E /* teapot_specular.png in Resources */,
+				8BB6C7FE1E204FF500F0FF90 /* Assets.xcassets in Resources */,
+				99CE5D7B1E3AB494003E972E /* seafloor.png in Resources */,
+				99CE5D791E3AB494003E972E /* lobbyzneg.JPG in Resources */,
+				8BB6C8131E20512B00F0FF90 /* Data in Resources */,
+				8BB6C8181E20517000F0FF90 /* utah-teapot.obj in Resources */,
+				99CE5D751E3AB494003E972E /* lobbyxneg.JPG in Resources */,
+				8BB6C7FC1E204FF500F0FF90 /* Main.storyboard in Resources */,
+				99CE5D781E3AB494003E972E /* lobbyypos.JPG in Resources */,
+				99CE5D7A1E3AB494003E972E /* lobbyzpos.JPG in Resources */,
+				99CE5D7C1E3AB494003E972E /* teapot_decal.png in Resources */,
+				99CE5D761E3AB494003E972E /* lobbyxpos.JPG in Resources */,
+				99CE5D771E3AB494003E972E /* lobbyyneg.JPG in Resources */,
+				99CE5D7E1E3AB494003E972E /* teapot_specular.pdn in Resources */,
+				99CE5D7D1E3AB494003E972E /* teapot_emissive.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8BB6C7EA1E204FF500F0FF90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BB6C8111E20512600F0FF90 /* Mesh.mm in Sources */,
+				8BB6C80E1E20512600F0FF90 /* GLKitComplex.mm in Sources */,
+				8BB6C8101E20512600F0FF90 /* main.m in Sources */,
+				8BB6C80F1E20512600F0FF90 /* GLRenderer.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8BB6C7FA1E204FF500F0FF90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB6C7FB1E204FF500F0FF90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8BB6C7FF1E204FF500F0FF90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8BB6C8001E204FF500F0FF90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8BB6C8031E204FF500F0FF90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8BB6C8041E204FF500F0FF90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8BB6C8061E204FF500F0FF90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GLKitComplex/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.GLKitComplex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8BB6C8071E204FF500F0FF90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GLKitComplex/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = test.GLKitComplex;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8BB6C7E91E204FF500F0FF90 /* Build configuration list for PBXProject "GLKitComplex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB6C8031E204FF500F0FF90 /* Debug */,
+				8BB6C8041E204FF500F0FF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BB6C8051E204FF500F0FF90 /* Build configuration list for PBXNativeTarget "GLKitComplex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BB6C8061E204FF500F0FF90 /* Debug */,
+				8BB6C8071E204FF500F0FF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8BB6C7E61E204FF500F0FF90 /* Project object */;
+}

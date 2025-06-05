@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ItemDefinitionGroup>
+    <ClangCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClangCompile>
+    <ClangCompile Condition="'$(AllowNSLog)' != 'true'">
+      <PreprocessorDefinitions>_WINOBJC_DO_NOT_USE_NSLOG=;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+
+  <PropertyGroup Label="Configuration">
+    <StarboardLinkWholeArchive>false</StarboardLinkWholeArchive>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="Globals">
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <TargetFramework>uap10.0</TargetFramework>
+    <PackageTargetFallback>native</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WinObjC.Language" Version="*" />
+    <PackageReference Include="Taef.Redist.Wlk" Version="1.0.170206001-nativeTargets" />
+    <PackageReference Include="cppwinrt" Version="2017.4.6.1" />
+  </ItemGroup>
+</Project>

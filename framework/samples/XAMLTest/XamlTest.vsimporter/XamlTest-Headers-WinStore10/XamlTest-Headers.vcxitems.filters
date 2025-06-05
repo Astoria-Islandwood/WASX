@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="XamlTest">
+      <UniqueIdentifier>{CE2E982F-EBD5-4691-AC2B-B44EA7A69624}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\XamlTest\MainViewController.h">
+      <Filter>XamlTest</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\XamlTest\AppDelegate.h">
+      <Filter>XamlTest</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

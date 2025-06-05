@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{0b507f42-6358-4917-9ca3-dc3ca658d8a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{1e694f71-8a6e-451e-9c47-617188eb0246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelloGLKit">
+      <UniqueIdentifier>{EA2476C5-B427-4041-B92E-25D9A76C65D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelloGLKit\Base">
+      <UniqueIdentifier>{373F3EDA-5063-43D5-97E3-69D09A371BFC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{2D0FABC2-CD56-406B-85D0-5B7F9DF07A09}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="HelloGLKit_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\HelloGLKit\Assets.xcassets">
+      <Filter>HelloGLKit</Filter>
+    </AssetCatalogCompile>
+    <ClInclude Include="..\..\HelloGLKit\GLRenderer.h">
+      <Filter>HelloGLKit</Filter>
+    </ClInclude>
+    <ClangCompile Include="..\..\HelloGLKit\GLRenderer.mm">
+      <Filter>HelloGLKit</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\HelloGLKit\HelloGLKit.mm">
+      <Filter>HelloGLKit</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\HelloGLKit\main.m">
+      <Filter>HelloGLKit</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\HelloGLKit\Info.plist" />
+    <StoryboardCompile Include="..\..\HelloGLKit\Base.lproj\LaunchScreen.storyboard">
+      <Filter>HelloGLKit\Base</Filter>
+    </StoryboardCompile>
+    <StoryboardCompile Include="..\..\HelloGLKit\Base.lproj\Main.storyboard">
+      <Filter>HelloGLKit\Base</Filter>
+    </StoryboardCompile>
+    <Text Include="HelloGLKit-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="HelloGLKit-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

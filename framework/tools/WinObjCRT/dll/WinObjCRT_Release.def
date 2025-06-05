@@ -1,0 +1,72 @@
+LIBRARY WinObjCRT
+    EXPORTS
+        ; Shim all of the dbg CRT symbols that would use the debug heap.
+        ; In the Release version of the WinObjCRT, redirect these symbols
+        ; to the release heap version. This is because the "end product"
+        ; is configured release (by nature of this dll getting chosen) and
+        ; we need all heap allocation / deallocation to be on the same heap
+        ; since some raw buffers are thrown around.
+        _aligned_free_dbg = _aligned_free
+        _aligned_malloc_dbg = _aligned_malloc
+        _aligned_msize_dbg = _aligned_msize
+        _aligned_offset_malloc_dbg = _aligned_offset_malloc
+        _aligned_offset_realloc_dbg = _aligned_offset_realloc
+        _aligned_offset_recalloc_dbg = _aligned_offset_recalloc
+        _aligned_realloc_dbg = _aligned_realloc
+        _aligned_recalloc_dbg = _aligned_recalloc
+        _calloc_dbg = calloc
+        _expand_dbg = _expand
+        _free_dbg = free
+        _fullpath_dbg = _fullpath
+        _getcwd_dbg = _getcwd
+        _getdcwd_dbg = _getdcwd
+        _malloc_dbg = malloc
+        _mbsdup_dbg = _mbsdup
+        _msize_dbg = _msize
+        _realloc_dbg = realloc
+        _recalloc_dbg = _recalloc
+        _strdup_dbg = _strdup
+        _tempnam_dbg = _tempnam
+        _wcsdup_dbg = _wcsdup
+        _wfullpath_dbg = _wfullpath
+        _wgetcwd_dbg = _wgetcwd
+        _wgetdcwd_dbg = _wgetdcwd
+        _wtempnam_dbg = _wtempnam
+
+        _aligned_free
+        _aligned_malloc
+        _aligned_msize
+        _aligned_offset_malloc
+        _aligned_offset_realloc
+        _aligned_offset_recalloc
+        _aligned_realloc
+        _aligned_recalloc
+        calloc
+        _expand
+        free
+        _fullpath
+        _getcwd
+        _getdcwd
+        malloc
+        _mbsdup
+        _msize
+        realloc
+        _recalloc
+        _strdup
+        _tempnam
+        _wcsdup
+        _wfullpath
+        _wgetcwd
+        _wgetdcwd
+        _wtempnam
+        _callnewh
+        _calloc_base
+        _free_base
+        _get_heap_handle
+        _heapmin
+        _malloc_base
+        _query_new_handler
+        _query_new_mode
+        _realloc_base
+        _set_new_mode
+

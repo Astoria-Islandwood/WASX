@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Accelerate\vImage.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Accelerate\ErrorHandler.mm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_caxpy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ccopy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cdotc_sub.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cdotu_sub.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cgbmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cgemm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cgemv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cgerc.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cgeru.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_chemm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_chemv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cher.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cher2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cher2k.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cherk.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_chpr.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_chpr2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cscal.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_csscal.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_cswap.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_csymm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_csyr2k.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_csyrk.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctbsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctpmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctpsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctrmm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctrmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctrsm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ctrsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dasum.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_daxpy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dcopy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ddot.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dgbmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dgemm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dgemv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dger.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dnrm2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_drot.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_drotg.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dscal.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dspr.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dspr2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dswap.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dsymm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dsymv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dsyr.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dsyr2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dsyr2k.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dsyrk.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtbsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtpmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtpsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtrmm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtrmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtrsm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dtrsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dzasum.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_dznrm2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_icamax.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_idamax.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_isamax.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_izamax.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sasum.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_saxpy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_scasum.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_scnrm2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_scopy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sdot.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sgbmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sgemm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sgemv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sger.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_snrm2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_srot.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_srotg.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sscal.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sspr.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sspr2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_sswap.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ssymm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ssymv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ssyr.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ssyr2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ssyr2k.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ssyrk.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_stbsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_stpmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_stpsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_strmm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_strmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_strsm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_strsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zaxpy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zcopy.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zdotc_sub.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zdotu_sub.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zdscal.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zgbmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zgemm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zgemv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zgerc.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zgeru.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zhemm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zhemv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zher.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zher2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zher2k.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zherk.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zhpr.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zhpr2.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zscal.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zswap.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zsymm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zsyr2k.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_zsyrk.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztbsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztpmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztpsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztrmm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztrmv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztrsm.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\cblas_ztrsv.c" />
+    <ClCompile Include="..\..\..\deps\3rdparty\CBLAS\xerbla.c" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\blasCDouble.cpp" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\blasCFloat.cpp" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\blasDouble.cpp" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\blasFloat.cpp" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\cblas_globals.c" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\cblas_xerbla.c" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\vDSP.cpp" />
+    <ClCompile Include="..\..\..\Frameworks\Accelerate\vImage.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{05EB0ADE-A598-42BA-BA3D-960AEEAA3C95}</ProjectGuid>
+    <ProjectName>AccelerateLib</ProjectName>
+    <RootNamespace>AccelerateLib</RootNamespace>
+    <AppContainerApplication>true</AppContainerApplication>
+    <StarboardBasePath>$(MSBuildThisFileDirectory)..\..\..</StarboardBasePath>
+    <OutputName>AccelerateLib</OutputName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(StarboardBasePath)\include;$(StarboardBasePath)\deps\3rdparty;%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EIGEN_MPL2_ONLY;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <ClangCompile>
+      <IncludePaths>$(StarboardBasePath)\deps\prebuilt\include;$(StarboardBasePath)\deps\prebuilt\include\icu;$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include;$(StarboardBasePath)\include\xplat;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(StarboardBasePath)\include;$(StarboardBasePath)\deps\3rdparty;%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EIGEN_MPL2_ONLY;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClangCompile>
+      <IncludePaths>$(StarboardBasePath)\deps\prebuilt\include;$(StarboardBasePath)\deps\prebuilt\include\icu;$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include;$(StarboardBasePath)\include\xplat;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(StarboardBasePath)\include;$(StarboardBasePath)\deps\3rdparty;%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EIGEN_MPL2_ONLY;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClangCompile>
+      <IncludePaths>$(StarboardBasePath)\deps\prebuilt\include;$(StarboardBasePath)\deps\prebuilt\include\icu;$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include;$(StarboardBasePath)\include\xplat;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>$(StarboardBasePath)\include;$(StarboardBasePath)\deps\3rdparty;%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EIGEN_MPL2_ONLY;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClangCompile>
+      <IncludePaths>$(StarboardBasePath)\deps\prebuilt\include;$(StarboardBasePath)\deps\prebuilt\include\icu;$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include;$(StarboardBasePath)\include\xplat;%(IncludePaths)</IncludePaths>
+      <AdditionalOptions>"-DACCELERATE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.targets" />
+  </ImportGroup>
+  <Import Project="$(StarboardBasePath)\common\winobjc.packagereference.override.targets" Condition="Exists('$(StarboardBasePath)\common\winobjc.packagereference.override.targets')"/>
+</Project>

@@ -1,0 +1,9 @@
+module CoreTelephony [extern_c] {
+    use Foundation
+    umbrella header "CoreTelephony.h"
+    export *
+    
+    module * {
+        export *
+    }
+}

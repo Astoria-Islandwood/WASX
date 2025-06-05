@@ -1,0 +1,9 @@
+LIBRARY CoreAudio
+    EXPORTS
+        ; CoreAudioData.mm
+        IsAudioFormatNativeEndian
+        CalculateLPCMFlags
+        FillOutASBDForLPCM
+        FillOutAudioTimeStampWithHostTime
+        FillOutAudioTimeStampWithSampleTime
+        FillOutAudioTimeStampWithSampleAndHostTime

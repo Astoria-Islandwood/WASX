@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\CoreGraphics\dll\CoreGraphics.vcxproj">
+      <Project>{26da08da-d0b9-4579-b168-e7f0a5f20e57}</Project>
+    </ProjectReference>
+    <ProjectReference Include="$(MSBuildThisFileDirectory)..\..\UIKit\dll\UIKit.vcxproj">
+      <Project>{8e79930b-7ef6-4a4e-b46c-efc0a49c55d9}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIColor.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIImage.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIColorKernel.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIDetector.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIFaceFeature.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIFeature.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIFilter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIFilterShape.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIImageAccumulator.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIImageProvider.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIKernel.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIQRCodeFeature.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIRectangleFeature.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CISampler.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CITextFeature.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIVector.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIWarpKernel.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\CoreImage\CIContext.mm">
+      <ObjectiveCARC Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ObjectiveCARC>
+      <ObjectiveCARC Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ObjectiveCARC>
+      <ObjectiveCARC Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">true</ObjectiveCARC>
+      <ObjectiveCARC Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">true</ObjectiveCARC>
+    </ClangCompile>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{90A8C3CC-1430-41C8-B9B8-3994C5C118ED}</ProjectGuid>
+    <ProjectName>CoreImageLib</ProjectName>
+    <RootNamespace>CoreImageLib</RootNamespace>
+    <AppContainerApplication>true</AppContainerApplication>
+    <StarboardBasePath>$(MSBuildThisFileDirectory)..\..\..</StarboardBasePath>
+    <OutputName>CoreImageLib</OutputName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>"-DCOREIMAGE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>"-DCOREIMAGE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+      <OptimizationLevel>Full</OptimizationLevel>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>"-DCOREIMAGE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>"-DCOREIMAGE_IMPEXP= " %(AdditionalOptions)</AdditionalOptions>
+      <OptimizationLevel>Full</OptimizationLevel>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.targets" />
+  </ImportGroup>
+  <Import Project="$(StarboardBasePath)\common\winobjc.packagereference.override.targets" Condition="Exists('$(StarboardBasePath)\common\winobjc.packagereference.override.targets')"/>
+</Project>

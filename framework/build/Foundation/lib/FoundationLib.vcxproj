@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSInvocation.x86.asm">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Win32'">true</ExcludedFromBuild>
+      <UseSafeExceptionHandlers>true</UseSafeExceptionHandlers>
+    </MASM>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSInvocation.x86.mm">
+      <ExcludedFromBuild Condition="'$(Platform)'!='Win32'">true</ExcludedFromBuild>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSInvocation.arm.mm">
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClangCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSInvocation.arm.asm">
+      <ARMASM>true</ARMASM>
+      <PreprocessToFile>true</PreprocessToFile>
+      <ExcludedFromBuild Condition="'$(Platform)'!='ARM'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSException.cl.cpp" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\CFBridgeBase.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\CFHelpers.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSArray.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSAssertionHandler.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSAttributedString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSBlockOperation.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSBundle.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSByteOrder.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCalendar.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCharacterSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFCharacterSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFError.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCoder.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSColor.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSComparisonPredicate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCompoundPredicate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCondition.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCountedSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSData.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFData.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDateComponents.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDateFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDecimal.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDecimalNumber.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDelayedPerform.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDictionary.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFDictionary.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSEnumerator.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSError.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSException.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpression.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpressionFunction.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpressionVariable.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpressionConstantValue.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpressionEvaluatedObject.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpressionKeyPath.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExpressionDefaultFunctions.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileHandle.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSFileHandleNullDevice.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileManager.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSHTTPCookie.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSHTTPCookieStorage.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSHTTPURLResponse.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSIndexPath.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSIndexSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSInputSource.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSInputStream.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSInvocation.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSInvocationOperation.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSJSONSerialization.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSKeyedArchiver.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSKeyedUnarchiver.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSLock.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSLog.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMethodSignature.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableArray.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableAttributedString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableCharacterSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableData.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableDictionary.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableURLRequest.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNotificationCenter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNotificationQueue.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNull.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNumber.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNumberFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSObject_NSKeyValueArrayAdapter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSObject_NSKeyValueOrderedSetAdapter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSObject_NSKeyValueSetAdapter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOperation.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOperationQueue.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOrderedPerform.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOrderedSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOutputStream.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPathUtilities.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPathUtilitiesInternal.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPersistentDomain.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPredicate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPredicateUtil.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSProcessInfo.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPropertyListSerialization.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSRange.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSRegularExpression.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSRunLoop.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSRunLoopSource.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSRunLoopState.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSelectInputSource.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSelectSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSScanner.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSocket.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSortDescriptor.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSSLHandler.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSStream.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSThread.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSTimer.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSTimeZone.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURL.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLAuthenticationChallenge.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLCache.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLConnection.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLProtocol.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLProtocol_file.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLProtocol_WinHTTP.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLRequest.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLResponse.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSValue.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSUserDefaults.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSXMLParser.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\Utils.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSURLSessionDownloadResumeInfo.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSConstantString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\FormatPrintf.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\IcuHelper.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSLocale.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSUUID.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSKVOSupport.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSKVOSwizzling.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLCredentialStorage.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLSessionConfiguration.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLSession.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLSessionTask.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLSessionDataTask.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLSessionDownloadTask.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCachedURLResponse.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLCredential.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLProtectionSpace.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSLogging.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSProgress.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSRecursiveLock.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSObject.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSAutoreleasePool.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSBlocks.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSBooleanPredicate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSTextCheckingResult.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSBundleResourceRequest.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSByteCountFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCache.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSConditionLock.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDataDetector.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDateComponentsFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDateIntervalFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDecimalNumberHandler.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDirectoryEnumerator.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSEnergyFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSErrorRecoveryAttempting.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExtensionContext.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSExtensionItem.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileAccessIntent.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileCoordinator.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileSecurity.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileVersion.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSFileWrapper.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSHashTable.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSItemProvider.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSLengthFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSLinguisticTagger.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMachPort.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMapTable.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMassFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMessagePort.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMetadataItem.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMetadataQuery.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMetadataQueryAttributeValueTuple.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMetadataQueryResultGroup.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableIndexSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSMutableOrderedSet.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNetService.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNetServiceBrowser.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSNotification.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSObject_NSCoding.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOrthography.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPersonNameComponents.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPersonNameComponentsFormatter.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPipe.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPointerArray.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPointerFunctions.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPort.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPortMessage.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSProxy.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPurgeableData.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSUbiquitousKeyValueStore.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSUndoManager.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLComponents.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLQueryItem.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLSessionUploadTask.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSUserActivity.mm">
+      <ObjectiveCARC>true</ObjectiveCARC>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSValueTransformer.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSZone.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\lex.yy.m">
+      <AdditionalOptions>-Wno-incompatible-pointer-types-discards-qualifiers -Wno-deprecated-declarations %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\rules.tab.m">
+      <AdditionalOptions>-Wno-implicit-function-declaration %(AdditionalOptions)</AdditionalOptions>
+    </ClangCompile>
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\MainDispatcher.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFMutableString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFAttributedString.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFNumber.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFDate.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFArray.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFURL.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFLocale.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFCalendar.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFCollectionSupport.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSKeyValueCodingAggregateFunctions.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFTimeZone.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFOutputStream.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFInputStream.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSString+HSTRING.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSUndoBasicAction.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSUndoGroup.mm" />
+    <ClangCompile Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\_NSUndoManagerStack.mm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFArray.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFCharacterSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFError.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSColor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSConstantString.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSDelayedPerform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSOrderedPerform.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPathUtilitiesInternal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSPersistentDomain.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSelectInputSource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSelectSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSocket.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSSSLHandler.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSURLProtocol_file.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\include\BridgeHelpers.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFString.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFData.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFDictionary.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSStringAdditionsForCF.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFSet.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFNumber.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFURL.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFLocale.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFCalendar.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFDate.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFTimeZone.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFInputStream.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)..\..\..\Frameworks\Foundation\NSCFOutputStream.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{7D635E25-0D8D-4B9A-B9DA-53185AB8A9E5}</ProjectGuid>
+    <ProjectName>FoundationLib</ProjectName>
+    <RootNamespace>FoundationLib</RootNamespace>
+    <AppContainerApplication>true</AppContainerApplication>
+    <StarboardBasePath>$(MSBuildThisFileDirectory)..\..\..</StarboardBasePath>
+    <OutputName>FoundationLib</OutputName>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;$(StarboardBasePath)\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;_UNICODE;UNICODE;FOUNDATION_IMPEXP=;COREFOUNDATION_IMPEXP=;OBJC_HOOK="extern __declspec(dllimport)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 %(AdditionalOptions) -Wno-error -Werror=incomplete-implementation -Werror=return-type -Werror=objc-protocol-property-synthesis -Werror=protocol</AdditionalOptions>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;FOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";DEPLOYMENT_TARGET_WINDOWS</PreprocessorDefinitions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;$(StarboardBasePath)\include;</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;_UNICODE;UNICODE;FOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 %(AdditionalOptions) -Wno-error -Werror=incomplete-implementation -Werror=return-type -Werror=objc-protocol-property-synthesis -Werror=protocol</AdditionalOptions>
+      <OptimizationLevel>Full</OptimizationLevel>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;FOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";DEPLOYMENT_TARGET_WINDOWS</PreprocessorDefinitions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;$(StarboardBasePath)\include;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;_UNICODE;UNICODE;FOUNDATION_IMPEXP="";COREFOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 %(AdditionalOptions) -Wno-error -Werror=incomplete-implementation -Werror=return-type -Werror=objc-protocol-property-synthesis -Werror=protocol</AdditionalOptions>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;FOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";DEPLOYMENT_TARGET_WINDOWS</PreprocessorDefinitions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|arm'">
+    <ClCompile>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(StarboardBasePath)\Frameworks\include;$(StarboardBasePath)\include\xplat;$(StarboardBasePath)\include;</AdditionalIncludeDirectories>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;_UNICODE;UNICODE;FOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+    </ClCompile>
+    <ClangCompile>
+      <AdditionalOptions>-DSTARBOARD_PORT=1 %(AdditionalOptions) -Wno-error -Werror=incomplete-implementation -Werror=return-type -Werror=objc-protocol-property-synthesis -Werror=protocol</AdditionalOptions>
+      <OptimizationLevel>Full</OptimizationLevel>
+      <PreprocessorDefinitions>NO_STUBS;NSBUILDINGFOUNDATION;FOUNDATION_IMPEXP="";OBJC_HOOK="extern __declspec(dllimport)";DEPLOYMENT_TARGET_WINDOWS</PreprocessorDefinitions>
+    </ClangCompile>
+  </ItemDefinitionGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(StarboardBasePath)\msvc\sdk-build.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+  <Target Condition="'$(Platform)'=='ARM'" Name="ComputeARMASMInput" AfterTargets="ClCompile">
+    <ItemGroup>
+      <ARMASM Include="@(ClCompile-&gt;WithMetadataValue('ARMASM', 'true')-&gt;'$(IntDir)%(Filename).i')" Condition="'%(ClCompile.ExcludedFromBuild)' != 'true'">
+        <ObjectFileName>$(IntDir)\%(Filename).obj</ObjectFileName>
+      </ARMASM>
+    </ItemGroup>
+  </Target>
+  <Target Condition="'$(Platform)'=='ARM'" Name="ARMASM" AfterTargets="ClCompile" Outputs="%(ARMASM.ObjectFileName)">
+    <Message Condition="'@(ARMASM)' != '' and '%(ARMASM.ExcludedFromBuild)' != 'true'" Importance="High" Text="Assembling %(ARMASM.Identity)..." />
+    <Exec Condition="'@(ARMASM)' != '' and '%(ARMASM.ExcludedFromBuild)' != 'true'" Command="armasm.exe -16 -g &quot;%(ARMASM.FullPath)&quot; -o &quot;%(ARMASM.ObjectFileName)&quot;" />
+  </Target>
+  <Import Project="$(StarboardBasePath)\common\winobjc.packagereference.override.targets" Condition="Exists('$(StarboardBasePath)\common\winobjc.packagereference.override.targets')" />
+</Project>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{11936f98-f3d4-4b7a-b934-d03479f519e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{18e82c4d-23a9-4a75-bc05-f0636b9be8a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelloUI">
+      <UniqueIdentifier>{2C27587C-308D-48A5-B64B-79BFDCAB5B2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HelloUI\Supporting Files">
+      <UniqueIdentifier>{50B7120C-FFCC-4CB1-B89F-35FD5F4FADB6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Xcode Variable Files">
+      <UniqueIdentifier>{BE26924F-0F35-4598-A903-B1A64F7BA700}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="default.rd.xml" />
+    <AppxManifest Include="Package.appxmanifest" />
+    <None Include="HelloUI_TemporaryKey.pfx" />
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <AssetCatalogCompile Include="..\..\HelloUI\Images.xcassets">
+      <Filter>HelloUI</Filter>
+    </AssetCatalogCompile>
+    <ClangCompile Include="..\..\HelloUI\HelloUI.m">
+      <Filter>HelloUI</Filter>
+    </ClangCompile>
+    <ClangCompile Include="..\..\HelloUI\main.m">
+      <Filter>HelloUI\Supporting Files</Filter>
+    </ClangCompile>
+    <SBInfoPlistCopy Include="..\..\HelloUI\Info.plist" />
+    <Text Include="HelloUI-Debug-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+    <Text Include="HelloUI-Release-xcvars.txt">
+      <Filter>Xcode Variable Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
